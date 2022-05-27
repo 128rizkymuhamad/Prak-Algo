@@ -1,0 +1,41 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+struct kualifikasi_nilai {
+    int id;
+    string nama;
+    string kelas;
+    int nilai;
+};
+
+int main() {
+    
+    int nilaiKKM = 75;
+    
+    kualifikasi_nilai siswa[] = {
+        {1, "Yanto", "A", 81},
+        {2, "Tisna", "D", 72},
+        {3, "Titin", "E", 79},
+        {4, "Kuja", "C", 84},
+        {5, "Dadang", "B", 9},
+    };
+    
+    for(int i = 0; i < 5; i++) {
+        
+        if(siswa[i].nilai > nilaiKKM) {
+            continue;
+        }
+        
+        cout << " Nama   : ";
+        cout << siswa[i].nama << endl;
+        cout << " Kelas  : ";
+        cout << siswa[i].kelas << endl;
+        cout << " Status : Ikuti Sesi Remedial !!!" << endl;
+        cout << "=================================" << endl;
+    }
+    getch();
+    return 0;
+    
+}
