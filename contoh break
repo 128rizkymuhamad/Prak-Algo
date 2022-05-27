@@ -1,0 +1,64 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+struct calonrw {
+  int id;
+  string nama;
+  string umur;
+  string point;
+};
+
+int main() {
+
+  calonrw jiwa[] = {
+    {
+      1,
+      "JOKO",
+      "50",
+      "90"
+    },
+    {
+       2,
+      "ASEP",
+      "46",
+      "89"
+    },
+    {
+      3,
+      "TONO",
+      "70",
+      "100"
+    },
+    {
+      4,
+      "KURNIWAN",
+      "65",
+      "88"
+    },
+    {
+      5,
+      "sep",
+      "65",
+      "88"
+    }
+  };
+
+  int calonrw = 3;
+
+  for (int i = 0; i < 6; i++) {
+
+    if (jiwa[i].id == calonrw) {
+      cout << "======================================="<<endl;
+      cout << "Selamat! " << jiwa[i].nama << " Anda Terpilih Sebagai Ketua RW !\n";
+      cout << "Dengan Perolehan Point " << jiwa[i].point << endl;
+      cout << "======================================="<<endl;
+      break;
+    }
+    cout << "Maaf Point Anda Kurang Banyak!!! " << jiwa[i].nama << " Jumlah Point Anda Adalah " << jiwa[i].point << "\n";
+  }
+
+  getch();
+  return 0;
+}
