@@ -1,0 +1,31 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main() {
+
+    int jumlahLangkah; 
+
+    cout << "Masukan Jumlah Kolom : ";
+    cin >> jumlahLangkah;
+    
+    for(int langkah = 0; langkah < jumlahLangkah; langkah++) {
+        
+        int jumlahLangkahPer2 = jumlahLangkah/2;
+        
+        if(langkah <= jumlahLangkahPer2) {
+            for(int bintang = 0; bintang < langkah; bintang++) {
+                cout << "*";
+            }
+            cout << "\n";
+        } else {
+            for(int bintang = 0; bintang < (jumlahLangkah - langkah); bintang++) {
+                cout << "*";
+            }
+            cout << "\n";
+        }
+    }
+    getch();
+    return 0;
+}
