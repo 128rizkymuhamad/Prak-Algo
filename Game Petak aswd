@@ -1,49 +1,44 @@
 #include <iostream>
 #include <conio.h>
-#define xmap 20
-#define ymap 20
+#define xmap 10
+#define ymap 15
 
 using namespace std;
 
+	void manusia(){
+	cout << " "<<char(2) <<" ";
+	}
+
 int main(){
+	
+ system ("cls");
 
  int x, y, posisix, posisiy, batas;
  char input;
  char *arah[4];
  batas = 0;
- *arah = "@=@";
  
  int map[xmap][ymap]= {
-	1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
-	1,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,1,
-	1,0,3,0,2,0,0,0,0,0,0,0,0,0,0,0,3,0,0,1,
-	1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,
-	1,0,0,0,1,0,0,0,1,0,0,0,1,1,1,1,0,0,0,1,
-	1,0,0,3,1,1,0,1,1,0,0,0,1,0,1,1,0,0,0,1,
-	1,0,0,0,1,0,1,3,1,0,0,0,1,1,3,0,0,0,0,1,
-	1,0,0,0,1,0,0,0,1,0,0,0,1,0,1,0,3,0,0,1,
-	1,3,0,0,1,0,0,0,1,0,0,0,1,0,0,1,0,0,0,1,
-	1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,
-	1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,
-	1,0,1,1,1,1,0,1,0,1,1,1,1,0,1,1,1,1,0,1,
-	1,0,1,1,1,1,0,1,3,1,1,1,1,0,1,3,0,1,0,1,
-	1,0,1,1,3,0,0,1,0,1,1,1,1,0,1,1,0,0,0,1,
-	1,0,1,1,1,1,1,1,0,0,1,1,1,0,1,1,1,0,0,1,
-	1,0,0,3,1,1,1,1,0,1,1,1,1,0,1,3,0,1,0,1,
-	1,0,1,1,1,1,1,0,0,0,0,0,0,0,1,1,0,0,0,1,
-	1,0,1,0,3,1,1,0,0,0,0,3,0,3,0,1,0,0,0,1,
-	1,0,0,0,0,0,0,3,0,0,0,0,0,0,1,1,0,0,3,1,
-	1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+	1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+	1,2,0,0,0,0,0,0,0,0,0,0,0,0,1,
+	1,0,0,0,0,1,0,0,0,0,0,0,0,0,1,
+	1,0,0,0,1,1,1,0,0,0,0,0,0,0,1,
+	1,0,0,1,1,1,1,1,0,0,0,0,0,0,1,
+	1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,
+	1,0,0,0,0,0,0,0,1,3,0,0,0,0,1,
+	1,0,0,0,0,0,0,0,1,1,0,0,0,0,1,
+	1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,
+	1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
        };
        
     cout << "\n";
    	cout << "++============================================++\n";
-    cout << "||  SELAMAT DATANG USER SETIA | A = KE KIRI   ||\n";
-	cout << "||    RIZKY MUHAMAD RAMDANI   | S = KE BAWAH  ||\n";
-	cout << "||          1217050128        | w = KE ATAS   ||\n";
-	cout << "||                            | D = KE KANAN  ||\n";
-	cout << "||                            | @=@ = HERO    ||\n";
-	cout << "||                            | *#* = SAMPAH  ||\n";
+        cout << "||  SELAMAT DATANG USER SETIA | A = KE KIRI     ||\n";
+	cout << "||    RIZKY MUHAMAD RAMDANI   | S = KE BAWAH    ||\n";
+	cout << "||          1217050128        | w = KE ATAS     ||\n";
+	cout << "||                            | D = KE KANAN    ||\n";
+	cout << "||                            | Smile = HERO    ||\n";
+	cout << "||                            | *#* = Hama      ||\n";
 	cout << "++============================================++\n";
 	cout << "\n";
 	
@@ -64,7 +59,7 @@ int main(){
     }
     
     else if ( map[x][y] == 2){
-     cout << *arah;
+     manusia();
      posisix = x;
      posisiy = y;
     }
@@ -79,13 +74,12 @@ int main(){
   }
   
 
-  cout << endl << "posisi x = " << posisix << endl << "posisi y = " << posisiy;
+  cout << endl << "Koordinat x = " << posisix << endl << "Koordinat y = " << posisiy;
   input = getch();
   if( input == 's' ){
    if ( map[posisix+1][posisiy] == 0 || map[posisix+1][posisiy ] == 3){
     map[posisix][posisiy] = 0; 
     map[posisix+1][posisiy] = 2;
-    *arah="@=@";
     }
    }
    
@@ -93,7 +87,7 @@ int main(){
    if ( map[posisix][posisiy+1] == 0 || map[posisix][posisiy+1] == 3){
     map[posisix][posisiy ]= 0;
     map[posisix][posisiy+1] = 2;
-    *arah = "@=@";
+    
     }
    }
    
@@ -101,7 +95,7 @@ int main(){
    if ( map[posisix][posisiy-1] == 0 || map[posisix][posisiy-1] == 3){
     map[posisix][posisiy] = 0;
     map[posisix][posisiy-1] = 2;
-    *arah = "@=@";
+    
    }
   }
   
@@ -109,10 +103,12 @@ int main(){
    if ( map[posisix-1][posisiy] == 0 || map[posisix-1][posisiy] == 3){
     map[posisix][posisiy] = 0;
     map[posisix-1][posisiy] = 2;
-    *arah = "@=@";
+   
     }
    }
    
+   system ("cls");
+
    cout << "\n";
    cout << "\n";
    cout << "========================\n";
