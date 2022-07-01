@@ -33,12 +33,12 @@ int main(){
        
     cout << "\n";
    	cout << "++==========  Manusia Dan Hama  ==============++\n";
-    cout << "||  SELAMAT DATANG USER SETIA | A = KE KIRI   ||\n";
-	cout << "||    RIZKY MUHAMAD RAMDANI   | S = KE BAWAH  ||\n";
-	cout << "||          1217050128        | w = KE ATAS   ||\n";
-	cout << "||                            | D = KE KANAN  ||\n";
-	cout << "||                            | @=@ = HERO    ||\n";
-	cout << "||                            | *#* = SAMPAH  ||\n";
+    cout << "||  SELAMAT DATANG USER SETIA | A = KE KIRI        ||\n";
+	cout << "||    RIZKY MUHAMAD RAMDANI   | S = KE BAWAH       ||\n";
+	cout << "||          1217050128        | w = KE ATAS        ||\n";
+	cout << "||                            | D = KE KANAN       ||\n";
+	cout << "||                            | Smile = Manusia    ||\n";
+	cout << "||                            | *#* = Hama         ||\n";
 	cout << "++============================================++\n";
 	cout << "\n";
 	
@@ -87,7 +87,6 @@ int main(){
    if ( map[posisix][posisiy+1] == 0 || map[posisix][posisiy+1] == 3){
     map[posisix][posisiy ]= 0;
     map[posisix][posisiy+1] = 2;
-    
     }
    }
    
@@ -95,7 +94,6 @@ int main(){
    if ( map[posisix][posisiy-1] == 0 || map[posisix][posisiy-1] == 3){
     map[posisix][posisiy] = 0;
     map[posisix][posisiy-1] = 2;
-    
    }
   }
   
@@ -103,7 +101,6 @@ int main(){
    if ( map[posisix-1][posisiy] == 0 || map[posisix-1][posisiy] == 3){
     map[posisix][posisiy] = 0;
     map[posisix-1][posisiy] = 2;
-   
     }
    }
    
